@@ -15,6 +15,9 @@ DIRS_TO_LINK_RECURSIVELY=(
   ".config/niri"
   ".local/share/fcitx5/rime"
   ".ssh"
+  ".vscode"
+  ".config/Code"
+  ".config/zed"
 )
 
 # === Function ===

@@ -1,0 +1,80 @@
+{
+  // === UI ===
+  "window.autoDetectColorScheme": true,
+  "workbench.preferredLightColorTheme": "Catppuccin Latte",
+  "workbench.preferredDarkColorTheme": "Catppuccin Macchiato",
+  "preferredIconTheme.enable": true,
+  "preferredIconTheme.light": "catppuccin-latte",
+  "preferredIconTheme.dark": "catppuccin-macchiato",
+  "editor.fontFamily": "Maple Mono NF CN",
+  "editor.cursorBlinking": "expand",
+  "editor.cursorSmoothCaretAnimation": "explicit",
+  "editor.smoothScrolling": true,
+  "workbench.activityBar.location": "top",
+  "workbench.tree.indent": 10,
+  "workbench.startupEditor": "none",
+
+  // === Explorer ===
+  "explorer.fileNesting.enabled": true,
+
+  // === Editor ===
+  "editor.wordWrap": "on",
+  "editor.quickSuggestions": {
+    "other": "on",
+    "comments": "on",
+    "strings": "on"
+  },
+  "editor.guides.bracketPairs": "active",
+  "editor.tabSize": 2,
+  "editor.experimental.preferTreeSitter.css": true,
+  "editor.experimental.preferTreeSitter.ini": true,
+  "editor.experimental.preferTreeSitter.regex": true,
+  "editor.experimental.preferTreeSitter.typescript": true,
+
+  // === Terminal ===
+  "terminal.integrated.smoothScrolling": true,
+  "terminal.integrated.suggest.enabled": true,
+  "terminal.integrated.stickyScroll.enabled": false,
+
+  // === Git Integrated & SCM ===
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "git.blame.editorDecoration.enabled": true,
+
+  // === Files & Folders ===
+  "files.simpleDialog.enable": true,
+  "files.autoGuessEncoding": true,
+  "workbench.iconTheme": "catppuccin-latte",
+
+  // === Extensions Configuration ===
+  // --- Github Copilot ---
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "inlineChat.enableV2": false,
+
+  // === Language specific settings ===
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": true,
+    "scminput": false
+  },
+  "redhat.telemetry.enabled": true
+}

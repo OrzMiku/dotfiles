@@ -1,0 +1,77 @@
+{
+  "theme": {
+    "mode": "system",
+    "dark": "Catppuccin Macchiato",
+    "light": "Catppuccin Latte"
+  },
+  "icon_theme": {
+    "mode": "system",
+    "dark": "Catppuccin Macchiato",
+    "light": "Catppuccin Latte"
+  },
+  "profiles": {
+    "auto": {
+      "theme": {
+        "mode": "system",
+        "dark": "Catppuccin Macchiato",
+        "light": "Catppuccin Latte"
+      },
+      "icon_theme": {
+        "mode": "system",
+        "dark": "Catppuccin Macchiato",
+        "light": "Catppuccin Latte"
+      }
+    },
+    "light": {
+      "theme": "Catppuccin Latte",
+      "icon_theme": "Catppuccin Latte"
+    },
+    "dark": {
+      "theme": "Catppuccin Macchiato",
+      "icon_theme": "Catppuccin Macchiato"
+    }
+  },
+  "buffer_font_family": "Maple Mono NF CN",
+  "use_system_prompts": false,
+  "use_system_path_prompts": false,
+  "minimap": {
+    "show": "auto"
+  },
+  "gutter": {
+    "min_line_number_digits": 2
+  },
+  "indent_guides": {
+    "line_width": 2,
+    "coloring": "indent_aware"
+  },
+  "sticky_scroll": {
+    "enabled": true
+  },
+  "agent": {
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "gpt-5-codex"
+    },
+    "model_parameters": []
+  },
+  "tabs": {
+    "git_status": true,
+    "file_icons": true,
+    "show_diagnostics": "errors"
+  },
+  "format_on_save": "off",
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "diagnostics": {
+    "inline": {
+      "enabled": true
+    }
+  },
+  "auto_install_extensions": {
+    "html": true,
+    "catppuccin": true,
+    "catppuccin-icons": true
+  }
+}

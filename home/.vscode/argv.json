@@ -1,0 +1,5 @@
+{
+	"enable-crash-reporter": true,
+	"password-store": "gnome-libsecret",
+	"locale": "zh-cn"
+}
