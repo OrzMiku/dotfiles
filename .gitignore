@@ -1,0 +1,32 @@
+# Backup files created by apply-dotfiles.sh
+*.backup.*
+
+# Editor temporary files
+*.swp
+*.swo
+*~
+.*.sw?
+.DS_Store
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# Sensitive information
+**/secrets/
+**/*.key
+**/*.pem
+**/*.secret
+**/credentials.*
+**/.env.local
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE files
+.vscode/
+.idea/
+*.iml
