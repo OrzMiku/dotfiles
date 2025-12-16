@@ -323,9 +323,15 @@ animations {
 
 // bitwarden plugin popup
 window-rule {
-  match title="Bitwarden"
-  match app-id=r#"^chrome.*"#
-  open-floating true
+    match title="Bitwarden"
+    match app-id=r#"^chrome.*"#
+    open-floating true
+}
+
+// mpv
+window-rule {
+    match app-id="mpv"
+    open-floating true
 }
 
 // Work around WezTerm's initial configure bug

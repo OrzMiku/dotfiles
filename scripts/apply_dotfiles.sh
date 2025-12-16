@@ -20,6 +20,7 @@ DIRS_TO_LINK_RECURSIVELY=(
   ".vscode"
   ".config/Code"
   ".config/zed"
+  ".config/mpv"
 )
 
 # === Function ===
