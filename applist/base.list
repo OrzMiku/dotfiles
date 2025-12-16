@@ -1,0 +1,13 @@
+base
+base-devel
+linux
+linux-firmware
+amd-ucode
+btrfs-prog
+networkmanager
+neovim
+curl
+git
+zip
+unzip
+bash-completion
