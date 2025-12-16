@@ -5,6 +5,7 @@ DOTFILES_DIR="$HOME/dotfiles/home"
 HOME_DIR="$HOME"
 FILES_TO_LINK=(
   ".gtkrc-2.0"
+  ".ssh/config"
 )
 DIRS_TO_LINK_RECURSIVELY=(
   ".config/fcitx5"
@@ -98,7 +99,7 @@ link_file() {
     esac
   fi
 
-  ln -s "$src" "$dst"
+  ln -sf "$src" "$dst"
   echo "$1 is linked."
 }
 
