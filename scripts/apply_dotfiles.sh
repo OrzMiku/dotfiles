@@ -6,6 +6,8 @@ HOME_DIR="$HOME"
 FILES_TO_LINK=(
   ".gtkrc-2.0"
   ".config/nvim"
+  ".vimrc"
+  ".bashrc"
 )
 DIRS_TO_LINK_RECURSIVELY=(
   ".config/fcitx5"
