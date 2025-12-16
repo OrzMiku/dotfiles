@@ -5,7 +5,7 @@ DOTFILES_DIR="$HOME/dotfiles/home"
 HOME_DIR="$HOME"
 FILES_TO_LINK=(
   ".gtkrc-2.0"
-  ".ssh/config"
+  ".config/nvim"
 )
 DIRS_TO_LINK_RECURSIVELY=(
   ".config/fcitx5"
@@ -14,6 +14,7 @@ DIRS_TO_LINK_RECURSIVELY=(
   ".config/gtk-4.0"
   ".config/niri"
   ".local/share/fcitx5/rime"
+  ".ssh"
 )
 
 # === Function ===
