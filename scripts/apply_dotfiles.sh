@@ -21,6 +21,8 @@ DIRS_TO_LINK_RECURSIVELY=(
   ".config/Code"
   ".config/zed"
   ".config/mpv"
+  ".config/systemd/user"
+  ".config/autostart"
 )
 
 # === Function ===
@@ -112,7 +114,7 @@ link_file() {
 
 link_directory_recursion() {
   local dir="$1"
-  find "$DOTFILES_DIR/$dir" -type f | while read -r src_file; do
+  find "$DOTFILES_DIR/$dir" -type f,l | while read -r src_file; do
     local relative_path="${src_file#$DOTFILES_DIR/}"
     link_file "$relative_path"
   done
