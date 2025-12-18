@@ -25,3 +25,6 @@
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# fcitx5 profile
+home/.config/fcitx5/profile

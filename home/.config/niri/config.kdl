@@ -5,10 +5,11 @@
 
 // Environment
 environment {
-    LC_MESSAGES "zh_CN.UTF-8"
+    LANG "zh_CN.UTF-8"
     XMODIFIERS "@im=fcitx"
     GLFW_IM_MODULE "ibus"
     SDL_IM_MODULE "fcitx"
+    ELECTRON_OZONE_PLATFORM_HINT "auto"
 }
 
 // Input device configuration.
@@ -371,12 +372,6 @@ window-rule {
 window-rule {
     geometry-corner-radius 12
     clip-to-geometry true
-}
-
-// Inactive windows opacity
-window-rule {
-    match is-focused=false
-    opacity 0.85
 }
 
 // Floating windows focus ring

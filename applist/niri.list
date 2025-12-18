@@ -12,3 +12,4 @@ xwayland-satellite
 udiskie
 gnome-keyring
 polkit-gnome
+power-profiles-daemon

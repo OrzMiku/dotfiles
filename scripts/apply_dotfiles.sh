@@ -8,6 +8,7 @@ FILES_TO_LINK=(
   ".config/nvim"
   ".vimrc"
   ".bashrc"
+  ".config/JetBrains/IntelliJIdea2025.3/idea64.vmoptions"
 )
 DIRS_TO_LINK_RECURSIVELY=(
   ".config/fcitx5"
@@ -15,6 +16,7 @@ DIRS_TO_LINK_RECURSIVELY=(
   ".config/gtk-3.0"
   ".config/gtk-4.0"
   ".config/niri"
+  ".config/waybar"
   ".local/share/fcitx5/rime"
   ".ssh"
   ".vscode"
