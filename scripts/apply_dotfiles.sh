@@ -9,6 +9,7 @@ FILES_TO_LINK=(
   ".vimrc"
   ".bashrc"
   ".config/JetBrains/IntelliJIdea2025.3/idea64.vmoptions"
+  ".config/mimeapps.list"
 )
 DIRS_TO_LINK_RECURSIVELY=(
   ".config/fcitx5"

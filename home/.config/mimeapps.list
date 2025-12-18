@@ -1,0 +1,12 @@
+
+[Default Applications]
+x-scheme-handler/clash=sparkle.desktop
+x-scheme-handler/mihomo=sparkle.desktop
+x-scheme-handler/sparkle=sparkle.desktop
+x-scheme-handler/ccswitch=cc-switch-handler.desktop
+text/html=google-chrome.desktop
+x-scheme-handler/http=google-chrome.desktop
+x-scheme-handler/https=google-chrome.desktop
+x-scheme-handler/about=google-chrome.desktop
+x-scheme-handler/unknown=google-chrome.desktop
+inode/directory=org.gnome.Nautilus.desktop
