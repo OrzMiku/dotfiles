@@ -23,6 +23,7 @@ DIRS_TO_LINK_RECURSIVELY=(
   ".config/mpv"
   ".config/systemd/user"
   ".config/autostart"
+  ".local/share/dbus-1/services"
 )
 
 # === Function ===

@@ -50,6 +50,17 @@
   // --- Github Copilot ---
   "github.copilot.nextEditSuggestions.enabled": true,
   "inlineChat.enableV2": false,
+  "chat.mcp.gallery.enabled": true,
+  "chat.agentSessionsViewLocation": "view",
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": true,
+    "scminput": false
+  },
+
+  // --- Claude Code ---
+  "claudeCode.preferredLocation": "panel",
 
   // === Language specific settings ===
   "[jsonc]": {
@@ -69,12 +80,6 @@
   },
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "github.copilot.enable": {
-    "*": true,
-    "plaintext": false,
-    "markdown": true,
-    "scminput": false
   },
   "redhat.telemetry.enabled": true
 }

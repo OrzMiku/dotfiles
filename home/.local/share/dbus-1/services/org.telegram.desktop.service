@@ -1,0 +1,4 @@
+[D-BUS Service]
+Name=org.telegram.desktop
+Exec=/usr/bin/Telegram
+Environment=WEBKIT_DISABLE_COMPOSITING_MODE=1
