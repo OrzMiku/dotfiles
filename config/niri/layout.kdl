@@ -1,0 +1,13 @@
+layout {
+  gaps 8
+
+  default-column-width {
+    proportion 0.5
+  }
+
+  focus-ring {
+    width 4
+    active-gradient from="#39c5bb" to="#7fc8ff" angle=45
+    inactive-color "#505050"
+  }
+}
