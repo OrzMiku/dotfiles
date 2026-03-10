@@ -1,1 +1,2 @@
 spawn-at-startup "quickshell" "-c" "noctalia-shell"
+spawn-at-startup "/usr/lib/polkit-kde-authentication-agent-1"
