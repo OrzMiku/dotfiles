@@ -6,6 +6,10 @@ include "window-rule.kdl"
 include "binds.kdl"
 include "startup.kdl"
 
+cursor {
+  xcursor-theme "Bibata-Modern-Ice"
+}
+
 hotkey-overlay {
     skip-at-startup
 }

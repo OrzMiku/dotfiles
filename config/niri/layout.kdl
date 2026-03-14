@@ -1,7 +1,3 @@
-cursor {
-  xcursor-theme "Bibata-Modern-Ice"
-}
-
 layout {
   gaps 8
 
