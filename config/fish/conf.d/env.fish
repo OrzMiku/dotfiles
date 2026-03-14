@@ -14,4 +14,12 @@ if status is-interactive
   # opencode
   fish_add_path $HOME/.opencode/bin
 
+  # packwiz
+  fish_add_path $HOME/.local/share/packwiz
+
+  # uv
+  if test -e "$HOME/.local/bin/env.fish"
+    source "$HOME/.local/bin/env.fish"
+  end
+
 end
