@@ -1,7 +1,4 @@
 binds {
-    Mod+Ctrl+V hotkey-overlay-title="Open Clipboard History" {
-      spawn-sh "cliphist list | fuzzel --dmenu | cliphist decode | wl-copy" 
-    } 
     Mod+Shift+Slash {
         show-hotkey-overlay
     }
@@ -9,22 +6,31 @@ binds {
         spawn-sh "kitty || alacritty"
     }
     Mod+D hotkey-overlay-title="Run an Application: fuzzel" {
-        spawn "fuzzel"
+        spawn-sh "qs -c noctalia-shell ipc call launcher toggle || fuzzel"
+    }
+    Mod+Space hotkey-overlay-title="Run an Application: fuzzel" {
+        spawn-sh "qs -c noctalia-shell ipc call launcher toggle || fuzzel"
+    }
+    Ctrl+Alt+V {
+        spawn-sh "qs -c noctalia-shell ipc call launcher clipboard"
+    }
+    Ctrl+Mod+V {
+        spawn-sh "qs -c noctalia-shell ipc call launcher clipboard"
     }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" {
-        spawn "swaylock"
+        spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"
     }
     Super+Alt+S allow-when-locked=true hotkey-overlay-title=null {
         spawn-sh "pkill orca || exec orca"
     }
     XF86AudioRaiseVolume allow-when-locked=true {
-        spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+ -l 1.0"
+        spawn-sh "qs -c noctalia-shell ipc call volume increase || wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+ -l 1.0"
     }
     XF86AudioLowerVolume allow-when-locked=true {
-        spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-"
+        spawn-sh "qs -c noctalia-shell ipc call volume decrease || wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-"
     }
     XF86AudioMute allow-when-locked=true {
-        spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+        spawn-sh "qs -c noctalia-shell ipc call volume increase || wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
     }
     XF86AudioMicMute allow-when-locked=true {
         spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
@@ -42,10 +48,10 @@ binds {
         spawn-sh "playerctl next"
     }
     XF86MonBrightnessUp allow-when-locked=true {
-        spawn "brightnessctl" "--class=backlight" "set" "+10%"
+        spawn "qs -c noctalia-shell ipc call brightness increase || brightnessctl" "--class=backlight" "set" "+10%"
     }
     XF86MonBrightnessDown allow-when-locked=true {
-        spawn "brightnessctl" "--class=backlight" "set" "10%-"
+        spawn "qs -c noctalia-shell ipc call brightness decrease || brightnessctl" "--class=backlight" "set" "10%-"
     }
     Mod+O repeat=false {
         toggle-overview
