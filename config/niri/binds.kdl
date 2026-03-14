@@ -5,19 +5,19 @@ binds {
     Mod+T hotkey-overlay-title="Open a Terminal" {
         spawn-sh "kitty || alacritty"
     }
-    Mod+D hotkey-overlay-title="Run an Application: fuzzel" {
+    Mod+D hotkey-overlay-title="Run an Application" {
         spawn-sh "qs -c noctalia-shell ipc call launcher toggle || fuzzel"
     }
-    Mod+Space hotkey-overlay-title="Run an Application: fuzzel" {
+    Mod+Space hotkey-overlay-title="Run an Application" {
         spawn-sh "qs -c noctalia-shell ipc call launcher toggle || fuzzel"
     }
-    Ctrl+Alt+V {
+    Ctrl+Alt+V hotkey-overlay-title="Open Clipboard" {
         spawn-sh "qs -c noctalia-shell ipc call launcher clipboard"
     }
     Ctrl+Mod+V {
         spawn-sh "qs -c noctalia-shell ipc call launcher clipboard"
     }
-    Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" {
+    Super+Alt+L hotkey-overlay-title="Lock the Screen" {
         spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"
     }
     Super+Alt+S allow-when-locked=true hotkey-overlay-title=null {
