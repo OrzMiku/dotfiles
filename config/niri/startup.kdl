@@ -1,2 +1,3 @@
 spawn-at-startup "quickshell" "-c" "noctalia-shell"
-spawn-at-startup "/usr/lib/polkit-kde-authentication-agent-1"
+spawn-at-startup "gnome-keyring-daemon" "--start" "--components=secrets"
+// spawn-at-startup "/usr/lib/polkit-kde-authentication-agent-1"
