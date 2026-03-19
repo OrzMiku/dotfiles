@@ -5,9 +5,6 @@ if status is-interactive
   set -gx EDITOR $NVIM_PATH/nvim
   set -gx VISUAL $NVIM_PATH/nvim
 
-  # fnm
-  fish_add_path $HOME/.local/share/fnm
-
   # bun
   fish_add_path $HOME/.bun/bin
 
