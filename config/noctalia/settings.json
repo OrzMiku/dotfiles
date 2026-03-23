@@ -205,7 +205,8 @@
                     "pinned": [
                         "中州韵",
                         "Keyboard - English (US)",
-                        "Sparkle"
+                        "Sparkle",
+                        "chrome_status_icon_1"
                     ]
                 },
                 {
@@ -282,7 +283,7 @@
         "monitorForColors": "",
         "predefinedScheme": "Catppuccin",
         "schedulingMode": "off",
-        "useWallpaperColors": true
+        "useWallpaperColors": false
     },
     "controlCenter": {
         "cards": [
@@ -714,6 +715,11 @@
         "fillMode": "crop",
         "hideWallpaperFilenames": false,
         "monitorDirectories": [
+            {
+                "directory": "/home/orzmiku/Pictures/Wallpapers",
+                "name": "HDMI-A-1",
+                "wallpaper": ""
+            }
         ],
         "overviewBlur": 0.4,
         "overviewEnabled": false,
