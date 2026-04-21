@@ -48,10 +48,10 @@ binds {
         spawn-sh "playerctl next"
     }
     XF86MonBrightnessUp allow-when-locked=true {
-        spawn "qs -c noctalia-shell ipc call brightness increase || brightnessctl" "--class=backlight" "set" "+10%"
+        spawn-sh "qs -c noctalia-shell ipc call brightness increase || brightnessctl --class=backlight set +10%"
     }
     XF86MonBrightnessDown allow-when-locked=true {
-        spawn "qs -c noctalia-shell ipc call brightness decrease || brightnessctl" "--class=backlight" "set" "10%-"
+        spawn-sh "qs -c noctalia-shell ipc call brightness decrease || brightnessctl --class=backlight set 10%-"
     }
     Mod+O repeat=false {
         toggle-overview
