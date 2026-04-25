@@ -1,6 +1,6 @@
 include "environment.kdl"
 include "input.kdl"
-include "output.kdl"
+include optional=true "output.kdl"
 include "layout.kdl"
 include "window-rule.kdl"
 include "binds.kdl"
@@ -18,20 +18,13 @@ screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
 prefer-no-csd
 
-layer-rule {
-  match namespace="^noctalia-wallpaper*"
-  place-within-backdrop true
-}
-
-layout {
-  background-color "transparent"
-}
-
 overview {
   workspace-shadow {
     off
   }
 }
+
+include optional=true "./noctalia.kdl"
 
 
 include "./noctalia.kdl"

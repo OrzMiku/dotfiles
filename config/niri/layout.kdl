@@ -6,8 +6,10 @@ layout {
   }
 
   focus-ring {
-    width 2
+    width 1
     active-gradient from="#39c5bb" to="#7fc8ff" angle=30
     inactive-color "#505050"
   }
+
+  background-color "transparent"
 }
