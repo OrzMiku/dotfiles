@@ -26,6 +26,3 @@ overview {
 
 include optional=true "./noctalia.kdl"
 
-
-include "./noctalia.kdl"
-
