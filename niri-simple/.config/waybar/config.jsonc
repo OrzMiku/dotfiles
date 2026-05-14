@@ -1,0 +1,72 @@
+// -*- mode: jsonc -*-
+{
+    "height": 24,
+    "modules-left": [
+        "niri/workspaces"
+    ],
+    "modules-center": [
+        "niri/window"
+    ],
+    "modules-right": [
+        "bluetooth",
+        "pulseaudio",
+        "power-profiles-daemon",
+        "battery",
+        "battery#bat2",
+        "clock",
+        "tray"
+    ],
+    "bluetooth": {
+        "format": " {status}",
+        "format-disabled": "",
+        "format-connected": " {num_connections} connected",
+        "tooltip-format": "{controller_alias}\t{controller_address}",
+        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+        "on-click": "$TERMINAL bluetui"
+    },
+    "pulseaudio": {
+      "format": "{volume}% {icon} ",
+      "format-muted": "muted ",
+      "format-icons": {
+        "headphone": "",
+        "headset": "",
+        "default": ["", ""]
+      },
+      "scroll-step": 1,
+      "on-click": "$TERMINAL wiremix"
+    },
+    "tray": {
+        "spacing": 10
+    },
+    "clock": {
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%m-%d}"
+    },
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon} ",
+        "format-full": "{capacity}% {icon} ",
+        "format-charging": "{capacity}%  ",
+        "format-plugged": "{capacity}%  ",
+        "format-alt": "{time} {icon} ",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "battery#bat2": {
+        "bat": "BAT2"
+    },
+    "power-profiles-daemon": {
+      "format": "{icon}",
+      "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+      "tooltip": true,
+      "format-icons": {
+        "default": "",
+        "performance": "",
+        "balanced": "",
+        "power-saver": ""
+      }
+    }
+}
