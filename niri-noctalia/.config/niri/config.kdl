@@ -117,7 +117,7 @@ binds {
         spawn-sh "qs -c noctalia-shell ipc call launcher clipboard"
     }
 
-    Super+Mod+L hotkey-overlay-title="Lock the Screen" {
+    Ctrl+Alt+L hotkey-overlay-title="Lock the Screen" {
         spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"
     }
 
