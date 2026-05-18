@@ -9,10 +9,6 @@ environment {
     TERMINAL "kitty"
 }
 
-cursor {
-    xcursor-theme "Bibata-Modern-Ice"
-}
-
 input {
     mouse {
         accel-profile "flat"
