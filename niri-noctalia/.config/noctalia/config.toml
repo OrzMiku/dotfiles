@@ -1,0 +1,38 @@
+[bar.default]
+end = [ "tray", "notifications", "network", "bluetooth", "volume", "brightness", "battery", "control-center" ]
+margin_edge = 0
+margin_ends = 0
+radius = 0
+shadow = false
+start = [ "workspaces" ]
+thickness = 32
+widget_spacing = 8
+
+[[control_center.shortcuts]]
+type = "wifi"
+
+[[control_center.shortcuts]]
+type = "bluetooth"
+
+[[control_center.shortcuts]]
+type = "power_profile"
+
+[shell.panel]
+open_near_click_control_center = true
+
+[theme]
+community_palette = "Catppuccin Lavender"
+mode = "auto"
+source = "community"
+
+[wallpaper.default]
+path = "color:#181825"
+
+[wallpaper.last]
+path = "color:#181825"
+
+[wallpaper.monitors.HDMI-A-2]
+path = "color:#181825"
+
+[weather]
+enabled = false
