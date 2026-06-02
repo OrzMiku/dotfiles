@@ -40,7 +40,7 @@ overview {
     backdrop-color "#11111b"
 }
 
-spawn-at-startup "noctalia || qs -c noctalia-shell"
+spawn-sh-at-startup "noctalia || qs -c noctalia-shell"
 spawn-at-startup "fcitx5"
 
 hotkey-overlay {
