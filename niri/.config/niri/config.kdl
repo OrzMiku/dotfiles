@@ -25,6 +25,11 @@ input {
 
 include optional=true "output.kdl"
 
+cursor {
+    xcursor-theme "Bibata-Modern-Classic"
+    xcursor-size 24
+}
+
 layout {
     gaps 4
     // default-column-width {}
