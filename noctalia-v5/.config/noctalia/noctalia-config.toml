@@ -1,60 +1,33 @@
+[backdrop]
+enabled = true
+
 [bar.default]
-end = [ "tray", "notifications", "network", "bluetooth", "volume", "brightness", "battery", "control-center" ]
+auto_hide = true
+capsule = true
+center = [ "clock", "wallpaper" ]
+end = [ "tray", "notifications", "clipboard", "network", "bluetooth", "volume", "brightness", "battery", "control-center" ]
 margin_edge = 0
 margin_ends = 0
 radius = 0
-shadow = false
-start = [ "workspaces" ]
+reserve_space = false
+start = [ "workspaces", "media" ]
 thickness = 32
-widget_spacing = 8
-
-[[control_center.shortcuts]]
-type = "wifi"
-
-[[control_center.shortcuts]]
-type = "bluetooth"
-
-[[control_center.shortcuts]]
-type = "power_profile"
-
-[lockscreen_widgets]
-enabled = false
-schema_version = 2
-widget_order = [ "lockscreen-login-box@Virtual-1" ]
-
-    [lockscreen_widgets.grid]
-    cell_size = 16
-    major_interval = 4
-    visible = true
-
-    [lockscreen_widgets.widget."lockscreen-login-box@Virtual-1"]
-    box_height = 0.0
-    box_width = 0.0
-    cx = 640.0
-    cy = 677.0
-    output = "Virtual-1"
-    rotation = 0.0
-    type = "login_box"
 
 [shell.panel]
+launcher_categories = false
+launcher_compact = true
 open_near_click_control_center = true
 
+[shell.screen_corners]
+enabled = true
+size = 8
+
 [theme]
-community_palette = "Catppuccin Lavender"
+builtin = "Catppuccin"
 mode = "dark"
-source = "community"
 
     [theme.templates]
-    builtin_ids = [ "gtk3", "gtk4", "kcolorscheme", "kitty", "qt" ]
-
-[wallpaper.default]
-path = "color:#181825"
-
-[wallpaper.last]
-path = "color:#181825"
-
-[wallpaper.monitors.HDMI-A-2]
-path = "color:#181825"
+    builtin_ids = [ "gtk3", "gtk4", "kcolorscheme", "qt" ]
 
 [weather]
 enabled = false
