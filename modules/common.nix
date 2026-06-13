@@ -31,6 +31,8 @@
     fd
     ripgrep
     fzf
+    stow
+    trash-cli
   ];
 
   system.stateVersion = "26.05";
