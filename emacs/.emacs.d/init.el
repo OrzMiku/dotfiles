@@ -23,7 +23,7 @@
   :bind ("C-c a" . org-agenda)
   :config
   (setq org-directory "~/Documents/org")
-  (setq org-agenda-files "~/Documents/org/tasks.org")
+  (setq org-agenda-files  '("~/Documents/org/tasks.org"))
   (setq org-todo-keywords
 	'((sequence "TODO(t)" "NEXT(n)" "WAIT(w)" "HOLD(h)" "|" "DONE(d)")
 	  (sequence "|" "CANCELED(c)"))))
