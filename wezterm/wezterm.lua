@@ -21,7 +21,7 @@ config.window_padding = {
   top = 0,
   bottom = 0,
   left = 0,
-  right = 0
+  right = 0,
 }
 
 config.default_prog = { 'pwsh.exe', '-NoLogo' }
@@ -34,6 +34,12 @@ config.launch_menu = {
     label = 'PowerShell 7',
     args = { 'pwsh.exe', '-NoLogo' },
   },
+}
+
+config.keys = {
+  { key = 'F11', mods = 'NONE', action = wezterm.action.ToggleFullScreen },
+  { key = 'Backspace', mods = 'NONE', action = wezterm.action.SendString '\x7f' },
+  { key = 'Backspace', mods = 'CTRL', action = wezterm.action.SendString '\x17' },
 }
 
 return config
