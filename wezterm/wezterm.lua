@@ -1,21 +1,19 @@
 local wezterm = require 'wezterm'
 local config = wezterm.config_builder()
 
-config.front_end = 'WebGpu'
 config.enable_kitty_keyboard = true
 config.initial_cols = 120
 config.initial_rows = 30
 config.color_scheme = 'Catppuccin Mocha'
 config.window_decorations = 'RESIZE'
 config.use_fancy_tab_bar = false
-config.hide_tab_bar_if_only_one_tab = true
 config.window_background_opacity = 0.92
 config.text_background_opacity = 0.92
 config.window_close_confirmation = 'NeverPrompt'
 config.font = wezterm.font_with_fallback {
   'Maple Mono NF CN',
   'Jetbrains Mono',
-  'Consolas',
+  'consolas',
 }
 config.font_size = 12
 config.animation_fps = 120
