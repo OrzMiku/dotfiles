@@ -5,6 +5,10 @@ if (-not (Test-Path $starshipCachePath) -or (Get-Command starship -ErrorAction S
 . $starshipCachePath
 
 Set-PSReadLineOption -EditMode Emacs
+Set-PSReadLineKeyHandler -Key "Ctrl+LeftArrow" -Function BackwardWord
+Set-PSReadLineKeyHandler -Key "Ctrl+RightArrow" -Function ForwardWord
+Set-PSReadLineKeyHandler -Key "Ctrl+Backspace" -Function BackwardKillWord
+Set-PSReadLineKeyHandler -Key "Ctrl+w" -Function BackwardKillWord
 
 Import-Module PSFzf -ErrorAction SilentlyContinue
 if (-not $?) {
@@ -14,7 +18,3 @@ if (-not $?) {
 }
 
 Set-PSFzfOption -PSReadlineChordProvider 'Ctrl+t' -PSReadlineChordReverseHistory 'Ctrl+r'
-Set-PSFzfOption -TabExpansion
-Set-PSFzfOption -TabCompletionPreviewWindow 'hidden|right|down|hidden'
-Set-PSReadLineKeyHandler -Key Tab -ScriptBlock { Invoke-FzfTabCompletion }
-
