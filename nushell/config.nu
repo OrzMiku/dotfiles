@@ -1,4 +1,6 @@
-$env.config.buffer_editor = "nvim"
+if not (which nvim | is-empty) {
+  $env.config.buffer_editor = "nvim"
+}
 $env.config.show_banner = false
 
 let vendor_autoload_dir = ($nu.vendor-autoload-dirs | first)
