@@ -4,7 +4,21 @@ local config = wezterm.config_builder()
 config.enable_kitty_keyboard = true
 config.initial_cols = 120
 config.initial_rows = 30
-config.color_scheme = 'Catppuccin Mocha'
+local function get_appearance()
+  if wezterm.gui then
+    return wezterm.gui.get_appearance()
+  end
+  return 'Dark'
+end
+local function scheme_for_appearance(appearance)
+  if appearance:find 'Dark' then
+    return 'Catppuccin Mocha'
+  else
+    return 'Catppuccin Latte'
+  end
+end
+config.color_scheme = scheme_for_appearance(get_appearance())
+config.color_scheme = "Catppuccin Mocha"
 config.window_decorations = 'RESIZE'
 config.use_fancy_tab_bar = false
 config.window_background_opacity = 0.92
@@ -34,6 +48,11 @@ config.launch_menu = {
     label = 'PowerShell 7',
     args = { 'pwsh.exe', '-NoLogo' },
   },
+}
+config.keys = {
+  { key = 'F11', mods = 'NONE', action = wezterm.action.ToggleFullScreen },
+  { key = 'Backspace', mods = 'NONE', action = wezterm.action.SendString '\x7f' },
+  { key = 'Backspace', mods = 'CTRL', action = wezterm.action.SendString '\x17' },
 }
 
 return config
