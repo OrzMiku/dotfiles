@@ -3,15 +3,9 @@
   "theme": "light/dark",
   "defaultProvider": "openai-codex",
   "defaultModel": "gpt-5.6-sol",
-  "defaultThinkingLevel": "max",
+  "defaultThinkingLevel": "medium",
   "packages": [
     "npm:pi-web-access",
-    {
-      "source": "npm:@gotgenes/pi-permission-system",
-      "extensions": [
-        "+src/index.ts"
-      ]
-    },
     "npm:pi-lens",
     "npm:@dietrichgebert/ponytail"
   ],
