@@ -1,9 +1,13 @@
-alias rm='trash-put'
-alias tl='trash-list'
-alias tr='trash-restore'
+status is-interactive; or return
+
 alias ll='ls -l'
 alias la='ls -la'
 
-if [ "$TERM" = "xterm-kitty" ]
+if command -q trash-put
+    alias tl='trash-list'
+    alias tr='trash-restore'
+end
+
+if test "$TERM" = xterm-kitty; and command -q kitten
     alias ssh='kitten ssh'
 end
