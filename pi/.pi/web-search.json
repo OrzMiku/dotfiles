@@ -1,8 +1,0 @@
-{
-  "ssrf": {
-    "allowRanges": [
-      "198.18.0.0/16"
-    ]
-  },
-  "workflow": "none"
-}
