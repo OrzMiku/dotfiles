@@ -58,7 +58,8 @@ else
     if git clone --depth=1 \
       https://github.com/mattmc3/antidote.git \
       "${ZDOTDIR:-$HOME}/.antidote"; then
-      source "${ZDOTDIR:-$HOME}/.zshrc"
+      source "${ZDOTDIR:-$HOME}/.antidote/antidote.zsh"
+      antidote load "${ZDOTDIR:-$HOME}/.zsh_plugins"
       unfunction zsh_pm_init
     else
       print -u2 "failed to install .antidote"
