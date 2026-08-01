@@ -1,3 +1,7 @@
+# path
+typeset -U path
+path=(~/.local/bin $path)
+
 # env
 for editor in nvim vim emacs nano vi; do
   if (($+commands[$editor])); then
@@ -21,10 +25,6 @@ if (($+commands['trash-put'])); then
   alias tr='trash-restore'
 fi
 
-# path
-typeset -U path
-path=(~/.local/bin $path)
-
 # kitty
 if [[ $TERM == xterm-kitty ]] && (($+commands[kitten])); then
   alias ssh='kitten ssh'
@@ -46,6 +46,21 @@ if [[ -d $mason_bin_path ]]; then
   path=($mason_bin_path $path)
 fi
 unset mason_bin_path
+
+# bob
+bob_env="$HOME/.local/share/bob/env/env.sh"
+if [[ -r $bob_env ]]; then
+  source $bob_env
+fi
+unset bob_env
+
+# fnm
+fnm_dir="$HOME/.local/share/fnm"
+if [[ -x $fnm_dir/fnm ]]; then
+  path=($fnm_dir $path)
+  eval "$(fnm env --shell zsh)"
+fi
+unset fnm_dir
 
 # antidote
 antidote_dir=${ZDOTDIR:-$HOME}/.antidote
