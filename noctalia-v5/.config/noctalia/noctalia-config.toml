@@ -13,9 +13,11 @@ reserve_space = false
 start = [ "workspaces", "media" ]
 thickness = 32
 
+[shell.launcher]
+categories = false
+compact = true
+
 [shell.panel]
-launcher_categories = false
-launcher_compact = true
 open_near_click_control_center = true
 
 [shell.screen_corners]
