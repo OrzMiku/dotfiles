@@ -4,6 +4,7 @@ if [[ -d $antidote_dir ]] && [[ -f $zsh_plugins_file ]]; then
   source $antidote_dir/antidote.zsh
   antidote load $zsh_plugins_file
 else
+  # 手动触发，刻意的设计：仅当未安装 antidote 时定义此函数
   zsh_pm_init() {
     if git clone --depth=1 \
       https://github.com/mattmc3/antidote.git \

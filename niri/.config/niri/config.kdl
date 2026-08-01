@@ -117,6 +117,7 @@ binds {
         spawn-sh "kitty || ghostty || alacritty || foot";
     }
 
+    // 保留两种快捷键习惯，刻意的设计
     Mod+D hotkey-overlay-title="Run an Application" {
         spawn-sh "noctalia msg panel-toggle launcher || qs -c noctalia-shell ipc call launcher toggle || fuzzel"
     }
