@@ -1,12 +1,12 @@
 environment {
     LANG "zh_CN.UTF-8"
     XMODIFIERS "@im=fcitx"
-    // ELECTRON_OZONE_PLATFORM_HINT "auto"
+    ELECTRON_OZONE_PLATFORM_HINT "auto"
     QT_IM_MODULES "wayland;fcitx;ibus"
     QT_QPA_PLATFORM "wayland;xcb"
     QT_QPA_PLATFORMTHEME "gtk3"
     QT_AUTO_SCREEN_SCALE_FACTOR "1"
-    TERMINAL "kitty"
+    TERMINAL "ghostty"
 }
 
 input {
@@ -35,7 +35,7 @@ layout {
     // default-column-width {}
     background-color "#181825"
     focus-ring {
-        width 1
+        width 2
         active-gradient from="#39c5bb" to="#66ccff" angle=270
         inactive-color "#505050"
     }
@@ -61,7 +61,7 @@ prefer-no-csd
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
 animations {
-    slowdown 0.3
+    slowdown 0.6
 }
 
 /-window-rule {
@@ -69,11 +69,12 @@ animations {
     clip-to-geometry true
 }
 
-/-window-rule {
-    background-effect {
-        blur true
-        xray false
-    }
+window-rule {
+    match is-active=false
+    opacity 0.9
+}
+
+window-rule {
     popups {
         opacity 0.8
         background-effect {
@@ -83,9 +84,11 @@ animations {
     }
 }
 
-/-window-rule {
-    match is-active=false
-    opacity 0.9
+window-rule {
+    background-effect {
+        blur true
+        xray false
+    }
 }
 
 window-rule {
