@@ -1,0 +1,4 @@
+prefix={{ .chezmoi.homeDir }}/.local/npm
+{{ if dig "npm" "useMirror" false . -}}
+registry=https://registry.npmmirror.com
+{{ end -}}

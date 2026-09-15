@@ -1,0 +1,10 @@
+# Shared defaults; machine-specific overrides belong in chezmoi.toml [data.desktop].
+[desktop]
+terminal = "ghostty"
+terminalFallbacks = ["kitty", "alacritty", "foot"]
+cursorTheme = "Bibata-Modern-Classic"
+cursorSize = 24
+iconTheme = "Papirus"
+font = "Sans"
+gtk2Theme = "Adwaita"
+inputMethod = "fcitx"
