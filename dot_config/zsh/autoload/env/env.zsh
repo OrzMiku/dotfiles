@@ -9,3 +9,5 @@ fi
 if (($+commands[less])); then
   export PAGER=less
 fi
+
+WORDCHARS=${WORDCHARS//[.\\\/]/}
