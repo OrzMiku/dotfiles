@@ -1,16 +1,25 @@
-{{- $name := promptStringOnce . "git.name" "Git user name" | trim -}}
-{{- if eq $name "" -}}
-{{- fail "Git user name is required" -}}
-{{- end -}}
-{{- $email := promptStringOnce . "git.email" "Git user email" | trim -}}
-{{- if eq $email "" -}}
-{{- fail "Git user email is required" -}}
-{{- end -}}
-{{- $npmMirror := promptBool "Use npm mirror (npmmirror.com)" (dig "npm" "useMirror" false .) -}}
+{{- $email := promptStringOnce . "email" "Email address" -}}
+{{- $username := promptStringOnce . "username" "Username" -}}
+{{- $useNpmMirror := promptBool "Use npm mirror (npmmirror.com)" false -}}
 
-[data.git]
-    name = {{ $name | quote }}
-    email = {{ $email | quote }}
+encryption = "age"
 
-[data.npm]
-    useMirror = {{ $npmMirror }}
+[data]
+  email = {{ $email | quote }}
+  username = {{ $username | quote }}
+  useNpmMirror = {{ $useNpmMirror }}
+
+[merge]
+  command = "nvim"
+  args = ["-d", "{{ "{{" }} .Destination {{ "}}" }}", "{{ "{{" }} .Source {{ "}}" }}", "{{ "{{" }} .Target {{ "}}" }}"]
+
+[diff]
+  command = "nvim"
+  args = ["-d", "{{ "{{" }} .Destination {{ "}}" }}", "{{ "{{" }} .Target {{ "}}" }}"]
+
+[bitwarden]
+  unlock="auto"
+
+[age]
+  identity = "~/.config/chezmoi/key.txt"
+  recipient = "age13u0hd0zgw8p30jz26d79u5fkr0353nygpscp69spdxrwytga84msnxn9fr"

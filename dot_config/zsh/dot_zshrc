@@ -1,5 +1,48 @@
+HISTFILE=${ZDOTDIR:-$HOME}/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+setopt HIST_IGNORE_ALL_DUPS
+setopt SHARE_HISTORY
+setopt EXTENDED_HISTORY
 bindkey -e
+autoload -Uz select-word-style
+select-word-style bash
 
-for module in ${ZDOTDIR:-$HOME}/autoload/interactive/*.zsh(N); do
-  source "$module"
-done
+function zsh_pm_init() {
+  local antidote_dir="${ZDOTDIR:-$HOME}/.antidote"
+  if [[ -d "$antidote_dir" ]]; then
+    return 0
+  fi
+  git clone --depth=1 https://github.com/mattmc3/antidote.git "$antidote_dir"
+}
+
+() {
+  local antidote_dir="${ZDOTDIR:-$HOME}/.antidote"
+  if [[ -r "$antidote_dir/antidote.zsh" ]]; then
+    source "$antidote_dir/antidote.zsh"
+    antidote load
+  fi
+}
+
+alias ls="ls --color"
+alias ll='ls -l'
+alias la='ls -la'
+alias brew="brew as-brew-user"
+alias tl='trash-list'
+alias tr='trash-restore'
+
+if (($+commands[starship])); then
+  eval "$(starship init zsh)"
+fi
+
+if (($+commands[fnm])); then
+  eval "$(fnm env --use-on-cd --shell zsh)"
+fi
+
+if (($+commands[zoxide])); then
+  eval "$(zoxide init zsh)"
+fi
+
+if (($+commands[fzf])); then
+  eval "$(fzf --zsh)"
+fi

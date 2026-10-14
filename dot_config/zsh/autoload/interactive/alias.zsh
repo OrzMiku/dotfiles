@@ -1,9 +1,0 @@
-alias ls='ls --color'
-alias ll='ls -l'
-alias la='ls -la'
-
-# quoted subscript: shfmt's zsh parser misreads the hyphen as subtraction
-if [[ -v commands['trash-put'] ]]; then
-  alias tl='trash-list'
-  alias tr='trash-restore'
-fi

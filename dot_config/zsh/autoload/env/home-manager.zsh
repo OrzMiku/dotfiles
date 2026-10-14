@@ -1,5 +1,0 @@
-hm_session_vars="$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh"
-if [[ -r $hm_session_vars ]]; then
-  source $hm_session_vars
-fi
-unset hm_session_vars
