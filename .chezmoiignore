@@ -1,6 +1,7 @@
 # macOS only
 {{- if ne .chezmoi.os "darwin" }}
 .config/aerospace/
+.local/bin/start-mihomo.sh
 {{- end }}
 
 # Linux only
