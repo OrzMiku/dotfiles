@@ -9,14 +9,6 @@ encryption = "age"
   username = {{ $username | quote }}
   useNpmMirror = {{ $useNpmMirror }}
 
-[merge]
-  command = "nvim"
-  args = ["-d", "{{ "{{" }} .Destination {{ "}}" }}", "{{ "{{" }} .Source {{ "}}" }}", "{{ "{{" }} .Target {{ "}}" }}"]
-
-[diff]
-  command = "nvim"
-  args = ["-d", "{{ "{{" }} .Destination {{ "}}" }}", "{{ "{{" }} .Target {{ "}}" }}"]
-
 [bitwarden]
   unlock="auto"
 
