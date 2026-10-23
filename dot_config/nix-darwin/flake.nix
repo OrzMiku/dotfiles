@@ -18,7 +18,6 @@
           nixpkgs.config.allowUnfree = true;
           nixpkgs.hostPlatform = "aarch64-darwin";
 
-          system.primaryUser = "orzmiku";
           homebrew = {
             enable = true;
             onActivation = {
@@ -30,10 +29,13 @@
               "ghostty"
               "visual-studio-code"
               "helium-browser"
+              "iina"
+              "keka"
             ];
           };
 
           environment.systemPackages = with pkgs; [
+            yazi
             neovim
             starship
             fastfetch
@@ -42,6 +44,7 @@
             ripgrep
             tree-sitter
             fnm
+            uv
             bitwarden-cli
             git
             chezmoi
@@ -49,11 +52,17 @@
             zoxide
             mihomo
             mergiraf
+            nixd
             nixfmt
+            btop
+            gh
+            jq
           ];
 
           fonts.packages = with pkgs; [
             maple-mono.NF-CN
+            lxgw-wenkai
+            lxgw-neoxihei
           ];
 
           nix.settings = {
@@ -64,6 +73,7 @@
             ];
           };
 
+          system.primaryUser = "orzmiku";
           system.configurationRevision = self.rev or self.dirtyRev or null;
           system.stateVersion = 6;
         };
