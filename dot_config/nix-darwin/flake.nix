@@ -24,6 +24,7 @@
           nixpkgs.overlays = [
             neovim-nightly-overlay.overlays.default
           ];
+
           programs.flyline.enable = true;
 
           homebrew = {
@@ -38,9 +39,15 @@
                 name = "chen08209/tap";
                 trusted = true;
               }
+              {
+                name = "abue-ammar/tinycast";
+                trusted = true;
+              }
             ];
-
             casks = [
+              "tinycast"
+              "tencent-meeting"
+              "wechat"
               "crisp"
               "ghostty"
               "visual-studio-code"
@@ -79,6 +86,10 @@
             gh
             jq
             rustup
+            ast-grep
+            yq
+            duckdb
+            eza
           ];
 
           fonts.packages = with pkgs; [
