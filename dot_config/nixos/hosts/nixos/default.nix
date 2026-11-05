@@ -80,7 +80,6 @@
   environment.systemPackages = with pkgs; [
     neovim
     wget
-    catimg
     yazi
     starship
     fastfetch

@@ -1,4 +1,9 @@
-{ pkgs, config, inputs, ... }:
+{
+  pkgs,
+  config,
+  inputs,
+  ...
+}:
 {
   imports = [
 
@@ -42,13 +47,12 @@
       "flclash"
       "pearcleaner"
       "utm"
-      "docker"
+      "docker-desktop"
     ];
   };
 
   environment.systemPackages = with pkgs; [
     bash
-    catimg
     yazi
     neovim
     starship
