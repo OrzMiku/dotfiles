@@ -8,7 +8,7 @@ let
   cfg = config.miku.base.packages;
 in
 {
-  options.miku.base.packages.enableGuiPackages = lib.mkEnableOption "enable gui packages";
+  options.miku.base.packages.enableGuiPackages = lib.mkEnableOption "gui packages";
 
   config = lib.mkMerge [
     {

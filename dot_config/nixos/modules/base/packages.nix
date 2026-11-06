@@ -1,5 +1,4 @@
 {
-  config,
   lib,
   pkgs,
   ...
@@ -18,7 +17,6 @@ let
     ripgrep
     jq
     yq
-    duckdb
     gh
     mergiraf
     ast-grep
