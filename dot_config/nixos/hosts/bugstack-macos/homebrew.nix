@@ -15,6 +15,10 @@
         name = "abue-ammar/tinycast";
         trusted = true;
       }
+      {
+        name = "d12frosted/emacs-plus";
+        trusted = true;
+      }
     ];
     casks = [
       "tinycast"
@@ -31,6 +35,7 @@
       "pearcleaner"
       "utm"
       "docker-desktop"
+      "emacs-plus-app"
     ];
   };
 }

@@ -12,6 +12,8 @@ in
 
   config = lib.mkMerge [
     {
+      services.emacs.enable = lib.mkDefault true;
+      environment.systemPackages = with pkgs; [ emacs ];
       miku.base.packages.userPackages = [ pkgs.gcc ];
       programs.nix-ld.enable = true;
     }
