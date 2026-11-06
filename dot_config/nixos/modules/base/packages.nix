@@ -1,6 +1,7 @@
 {
   lib,
   pkgs,
+  inputs,
   ...
 }:
 let
@@ -28,6 +29,7 @@ let
     uv
     bitwarden-cli
     chezmoi
+    inputs.mineral.packages.${pkgs.system}.default
   ];
 in
 {

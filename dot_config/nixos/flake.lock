@@ -1,5 +1,21 @@
 {
   "nodes": {
+    "mineral": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "path": "./pkgs/mineral/",
+        "type": "path"
+      },
+      "original": {
+        "path": "./pkgs/mineral/",
+        "type": "path"
+      },
+      "parent": []
+    },
     "nix-darwin": {
       "inputs": {
         "nixpkgs": [
@@ -39,6 +55,7 @@
     },
     "root": {
       "inputs": {
+        "mineral": "mineral",
         "nix-darwin": "nix-darwin",
         "nixpkgs": "nixpkgs"
       }
