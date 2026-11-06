@@ -39,7 +39,6 @@ stdenv.mkDerivation (final: {
 
   buildInputs = [
     openssl
-    alsa-lib
   ]
   ++ lib.optionals stdenv.hostPlatform.isLinux [ alsa-lib ];
 
