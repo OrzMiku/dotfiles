@@ -36,6 +36,7 @@
       "utm"
       "docker-desktop"
       "emacs-plus-app"
+      "finetune"
     ];
   };
 }
