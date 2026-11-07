@@ -21,6 +21,15 @@
         ];
       };
 
+      nixosConfigurations."bugstack-t480s" = nixpkgs.lib.nixosSystem {
+        specialArgs = { inherit inputs; };
+        modules = [
+          ./modules/base
+          ./modules/platform/linux
+          ./hosts/bugstack-t480s
+        ];
+      };
+
       darwinConfigurations."bugstack-macos" = nix-darwin.lib.darwinSystem {
         specialArgs = { inherit inputs; };
         modules = [

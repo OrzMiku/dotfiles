@@ -4,9 +4,6 @@
   ...
 }:
 {
-  imports = [
-    ./homebrew.nix
-  ];
   nixpkgs.hostPlatform = "aarch64-darwin";
   users.users.orzmiku.packages = config.miku.base.packages.userPackages ++ [ ];
   system.primaryUser = "orzmiku";
