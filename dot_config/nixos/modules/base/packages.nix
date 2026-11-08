@@ -42,6 +42,7 @@ in
     nixpkgs.config.allowUnfree = true;
     environment.systemPackages = with pkgs; [
       git
+      git-lfs
       neovim
       curl
       wget
