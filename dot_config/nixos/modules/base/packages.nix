@@ -53,5 +53,6 @@ in
       VISUAL = "nvim";
     };
     miku.base.packages.userPackages = userPackages;
+    programs.direnv.enable = true;
   };
 }
