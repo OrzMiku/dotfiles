@@ -8,5 +8,6 @@
     ./packages.nix
     ./users.nix
     ./memory.nix
+    ./nix.nix
   ];
 }
