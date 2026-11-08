@@ -7,5 +7,6 @@
     ./network.nix
     ./packages.nix
     ./users.nix
+    ./memory.nix
   ];
 }
