@@ -7,9 +7,17 @@ in
     ./hardware-configuration.nix
   ];
 
-  users.users.orzmiku.packages = [
+  users.users.orzmiku.packages = with pkgs; [
     inputs.mineral.packages.${system}.default
+    telegram-desktop
+    prismlauncher
   ];
+
+  programs.steam.enable = true;
+  services.power-profiles-daemon.enable = true;
+  hardware.graphics.enable = true;
+  services.xserver.videoDrivers = [ "nvidia" ];
+  hardware.nvidia.open = true;
 
   networking.hostName = "bugstack";
 

@@ -41,7 +41,7 @@
         modules = [
           ./modules/base
           ./modules/platform/linux
-          ./hosts/bugstack-t480s
+          ./hosts/bugstack
         ];
       };
 
