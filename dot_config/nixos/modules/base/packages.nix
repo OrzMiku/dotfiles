@@ -1,11 +1,9 @@
 {
   lib,
   pkgs,
-  inputs,
   ...
 }:
 let
-  inherit (pkgs.stdenv.hostPlatform) system;
   userPackages = with pkgs; [
     yazi
     starship
@@ -30,7 +28,6 @@ let
     uv
     bitwarden-cli
     chezmoi
-    inputs.mineral.packages.${system}.default
   ];
 in
 {
