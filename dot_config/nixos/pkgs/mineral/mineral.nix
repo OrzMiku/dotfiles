@@ -8,19 +8,20 @@
   pkg-config,
   alsa-lib,
   nasm,
+  sqlite,
 }:
 rustPlatform.buildRustPackage (final: {
   pname = "mineral";
-  version = "0.6.0";
+  version = "0.6.1";
 
   src = fetchFromGitHub {
     owner = "10knamesmore";
     repo = "Mineral";
     rev = "v${final.version}";
-    hash = "sha256-+Yychxtx5mK9sWHLCMFYA5UyHSTzrKpUYYdLvT0xWkI=";
+    hash = "sha256-4LGCNvc127gQbmre8AGVkVCXQ2MxcTfmSnWLDvoKDF4=";
   };
 
-  cargoHash = "sha256-GtvEGvb59TwXWWADrYbAav6FYGcuKTUKZ3PwSUwsStU=";
+  cargoHash = "sha256-Xfns1BiHzTWDXua47wmAsvbTgWdVDpOq+f+yT0IsZV0=";
 
   nativeBuildInputs = [
     cmake
@@ -30,6 +31,7 @@ rustPlatform.buildRustPackage (final: {
 
   buildInputs = [
     openssl
+    sqlite
   ]
   ++ lib.optionals stdenv.hostPlatform.isLinux [ alsa-lib ];
 
