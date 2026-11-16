@@ -1,4 +1,4 @@
-{ config, pkgs, ... }: {
+{ pkgs, ... }: {
   programs.zsh.enable = true;
 
   users.users.orzmiku = {
@@ -8,6 +8,5 @@
       "wheel"
       "networkmanager"
     ];
-    packages = config.miku.base.packages.userPackages;
   };
 }

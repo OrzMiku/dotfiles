@@ -12,9 +12,29 @@ in
   options.miku.base.packages.enableGuiPackages = lib.mkEnableOption "gui packages";
 
   config = {
+    nixpkgs.config.allowUnfree = true;
+
     home.packages =
       packages.system
       ++ packages.user
+      ++ lib.optionals pkgs.stdenv.hostPlatform.isLinux (
+        with pkgs;
+        [
+          gcc
+          trash-cli
+        ]
+      )
+      ++ lib.optionals (pkgs.stdenv.hostPlatform.isLinux && config.miku.base.packages.enableGuiPackages) (
+        with pkgs;
+        [
+          vscode
+          wechat
+          qq
+          wemeet
+          ghostty
+          mpv
+        ]
+      )
       ++ lib.optionals enableFonts (import ../../shared/font-list.nix { inherit pkgs; });
 
     home.sessionVariables = {

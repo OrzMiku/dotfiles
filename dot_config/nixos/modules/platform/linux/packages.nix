@@ -16,23 +16,11 @@ in
       environment.systemPackages = with pkgs; [
         emacs
       ];
-      miku.base.packages.userPackages = with pkgs; [
-        gcc
-        trash-cli
-      ];
     }
     (lib.mkIf cfg.enableGuiPackages {
       environment.systemPackages = with pkgs; [
         papirus-icon-theme
         bibata-cursors
-      ];
-      miku.base.packages.userPackages = with pkgs; [
-        vscode
-        wechat
-        qq
-        wemeet
-        ghostty
-        mpv
       ];
     })
   ];

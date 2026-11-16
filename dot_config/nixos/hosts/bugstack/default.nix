@@ -1,16 +1,7 @@
-{ pkgs, inputs, ... }:
-let
-  inherit (pkgs.stdenv.hostPlatform) system;
-in
+{ ... }:
 {
   imports = [
     ./hardware-configuration.nix
-  ];
-
-  users.users.orzmiku.packages = with pkgs; [
-    inputs.mineral.packages.${system}.default
-    telegram-desktop
-    prismlauncher
   ];
 
   programs.steam.enable = true;

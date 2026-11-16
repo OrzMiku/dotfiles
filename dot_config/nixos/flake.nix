@@ -37,24 +37,25 @@
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
         modules = [
           inputs.nix-index-database.homeModules.default
-          ./home/orzmiku
-          { targets.genericLinux.enable = true; }
+          ./home/orzmiku/generic-linux.nix
         ];
       };
 
       homeConfigurations."orzmiku@bugstack" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
+        extraSpecialArgs = { inherit inputs; };
         modules = [
           inputs.nix-index-database.homeModules.default
-          ./home/orzmiku
+          ./hosts/bugstack/home.nix
         ];
       };
 
       homeConfigurations."orzmiku@bugstack-macos" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.aarch64-darwin;
+        extraSpecialArgs = { inherit inputs; };
         modules = [
           inputs.nix-index-database.homeModules.default
-          ./home/orzmiku
+          ./hosts/bugstack-macos/home.nix
         ];
       };
 
