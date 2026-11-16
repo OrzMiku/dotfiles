@@ -1,5 +1,5 @@
 {
-  description = "NixOS";
+  description = "Nix";
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     nix-darwin = {
@@ -18,25 +18,35 @@
       url = "github:nix-community/neovim-nightly-overlay";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
   outputs =
-    { nixpkgs, nix-darwin, ... }@inputs:
     {
-      nixosConfigurations."nixos-vm" = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs; };
+      nixpkgs,
+      nix-darwin,
+      home-manager,
+      ...
+    }@inputs:
+    {
+      homeModules.base = import ./modules/home;
+
+      homeConfigurations."orzmiku" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.x86_64-linux;
         modules = [
-          ./modules/base
-          ./modules/platform/linux
-          ./hosts/nixos-vm
+          inputs.nix-index-database.homeModules.default
+          ./home/orzmiku
+          { targets.genericLinux.enable = true; }
         ];
       };
 
-      nixosConfigurations."bugstack-t480s" = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs; };
+      homeConfigurations."orzmiku@bugstack" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.x86_64-linux;
         modules = [
-          ./modules/base
-          ./modules/platform/linux
-          ./hosts/bugstack-t480s
+          inputs.nix-index-database.homeModules.default
+          ./home/orzmiku
         ];
       };
 

@@ -1,11 +1,11 @@
-{ pkgs, ... }: {
-  fonts.packages = with pkgs; [
-    noto-fonts
-    noto-fonts-color-emoji
-    noto-fonts-cjk-sans
-    noto-fonts-cjk-serif
-    maple-mono.NF-CN
-    lxgw-wenkai
-    lxgw-neoxihei
-  ];
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
+{
+  fonts.packages = lib.mkIf (pkgs.stdenv.hostPlatform.isDarwin || config.miku.base.packages.enableGuiPackages) (
+    import ../../shared/font-list.nix { inherit pkgs; }
+  );
 }

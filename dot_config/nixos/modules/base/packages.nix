@@ -4,31 +4,7 @@
   ...
 }:
 let
-  userPackages = with pkgs; [
-    yazi
-    starship
-    zoxide
-    fzf
-    eza
-    fastfetch
-    tmux
-    btop
-    fd
-    ripgrep
-    jq
-    yq
-    gh
-    mergiraf
-    ast-grep
-    tree-sitter
-    nixd
-    nixfmt
-    rustup
-    fnm
-    uv
-    bitwarden-cli
-    chezmoi
-  ];
+  packages = import ../../shared/package-list.nix { inherit pkgs; };
 in
 {
   options.miku.base.packages.userPackages = lib.mkOption {
@@ -37,19 +13,12 @@ in
 
   config = {
     nixpkgs.config.allowUnfree = true;
-    environment.systemPackages = with pkgs; [
-      git
-      git-lfs
-      neovim
-      curl
-      wget
-      mihomo
-    ];
+    environment.systemPackages = packages.system;
     environment.variables = {
       EDITOR = "nvim";
       VISUAL = "nvim";
     };
-    miku.base.packages.userPackages = userPackages;
+    miku.base.packages.userPackages = packages.user;
     programs.direnv.enable = true;
   };
 }

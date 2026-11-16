@@ -1,4 +1,5 @@
-{ ... }: {
+{ config, lib, ... }:
+lib.mkIf config.miku.base.packages.enableGuiPackages {
   fonts.fontconfig.enable = true;
   fonts.fontconfig.defaultFonts = {
     serif = [
