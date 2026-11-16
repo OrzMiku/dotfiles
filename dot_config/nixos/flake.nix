@@ -50,6 +50,14 @@
         ];
       };
 
+      homeConfigurations."orzmiku@bugstack-macos" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.aarch64-darwin;
+        modules = [
+          inputs.nix-index-database.homeModules.default
+          ./home/orzmiku
+        ];
+      };
+
       nixosConfigurations."bugstack" = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs; };
         modules = [
