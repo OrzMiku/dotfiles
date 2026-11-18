@@ -8,8 +8,6 @@ let
   cfg = config.miku.base.packages;
 in
 {
-  options.miku.base.packages.enableGuiPackages = lib.mkEnableOption "gui packages";
-
   config = lib.mkMerge [
     {
       services.emacs.enable = lib.mkDefault true;

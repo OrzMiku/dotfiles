@@ -4,4 +4,5 @@
   ];
   programs.nh.flake = "/etc/nixos";
   programs.nix-ld.enable = true;
+  programs.nix-index-database.comma.enable = true;
 }

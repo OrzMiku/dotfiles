@@ -16,6 +16,4 @@
     clean.enable = true;
     clean.extraArgs = "--keep-since 7d --keep 5";
   };
-
-  programs.nix-index-database.comma.enable = true;
 }
