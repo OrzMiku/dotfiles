@@ -51,7 +51,10 @@
       };
 
       homeConfigurations."orzmiku@bugstack-macos" = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.aarch64-darwin;
+        pkgs = import nixpkgs {
+          system = "aarch64-darwin";
+          overlays = [ inputs.neovim-nightly-overlay.overlays.default ];
+        };
         extraSpecialArgs = { inherit inputs; };
         modules = [
           inputs.nix-index-database.homeModules.default
