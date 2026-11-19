@@ -11,10 +11,6 @@ export VISUAL=nvim
 export EDITOR=nvim
 export PAGER=less
 
-{{- if lookPath "bw" }}
-export OPENCODE_SERVER_PASSWORD={{- (bitwarden "item" "OpenCode Server Password").login.password | shellQuote }}
-{{- end }}
-
 if [[ -r "$HOME/.local/share/bob/env/env.sh" ]]; then
   source "$HOME/.local/share/bob/env/env.sh"
 fi
