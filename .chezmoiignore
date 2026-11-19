@@ -3,6 +3,7 @@
 .config/aerospace/
 .local/bin/start-mihomo.sh
 .config/nix-darwin/
+.config/rex/
 {{- end }}
 
 # Linux only
