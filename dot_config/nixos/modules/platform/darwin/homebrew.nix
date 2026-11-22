@@ -2,7 +2,7 @@
   homebrew = {
     enable = true;
     onActivation = {
-      autoUpdate = true;
+      autoUpdate = false;
       cleanup = "zap";
       extraFlags = [ "-v" ];
     };
