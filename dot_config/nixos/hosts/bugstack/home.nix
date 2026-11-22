@@ -2,10 +2,19 @@
 {
   imports = [ ../../home/orzmiku ];
 
-  miku.base.packages.enableGuiPackages = true;
-  home.packages = [
-    inputs.mineral.packages.${pkgs.stdenv.hostPlatform.system}.default
-    pkgs.telegram-desktop
-    pkgs.prismlauncher
-  ];
+  home.packages =
+    (with pkgs; [
+      vscode
+      wechat
+      qq
+      wemeet
+      ghostty
+      mpv
+      telegram-desktop
+      prismlauncher
+      inputs.mineral.packages.${stdenv.hostPlatform.system}.default
+    ])
+    ++ (import ../../shared/font-list.nix { inherit pkgs; });
+
+  fonts.fontconfig.enable = true;
 }

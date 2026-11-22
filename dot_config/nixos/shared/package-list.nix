@@ -30,6 +30,5 @@
     neovim
     curl
     wget
-    mihomo
   ];
 }

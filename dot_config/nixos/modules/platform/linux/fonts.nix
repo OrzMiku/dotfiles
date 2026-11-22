@@ -1,5 +1,5 @@
-{ config, lib, ... }:
-lib.mkIf config.miku.base.packages.enableGuiPackages {
+{ pkgs, ... }: {
+  fonts.packages = import ../../../shared/font-list.nix { inherit pkgs; };
   fonts.fontconfig.enable = true;
   fonts.fontconfig.defaultFonts = {
     serif = [
