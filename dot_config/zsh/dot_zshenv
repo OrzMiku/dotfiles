@@ -10,6 +10,7 @@ path=(
 export VISUAL=nvim
 export EDITOR=nvim
 export PAGER=less
+export EDITOR_SCHEME=neovim
 
 if [[ -r "$HOME/.local/share/bob/env/env.sh" ]]; then
   source "$HOME/.local/share/bob/env/env.sh"
