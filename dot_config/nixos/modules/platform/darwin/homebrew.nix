@@ -37,6 +37,8 @@
       "docker-desktop"
       "emacs-plus-app"
       "finetune"
+      "chatgpt"
+      "deepseek-harness"
     ];
   };
 }
