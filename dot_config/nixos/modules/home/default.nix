@@ -19,7 +19,12 @@ in
       ]
     )
     ++ lib.optionals pkgs.stdenv.hostPlatform.isDarwin (
-      import ../../shared/font-list.nix { inherit pkgs; }
+      with pkgs;
+      [
+        docker
+        colima
+      ]
+      ++ import ../../shared/font-list.nix { inherit pkgs; }
     );
 
   home.sessionVariables = {

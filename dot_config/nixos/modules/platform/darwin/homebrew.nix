@@ -34,7 +34,6 @@
       "flclash"
       "pearcleaner"
       "utm"
-      "docker-desktop"
       "emacs-plus-app"
       "finetune"
       "chatgpt"
