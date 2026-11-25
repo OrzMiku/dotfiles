@@ -29,7 +29,7 @@
       "visual-studio-code"
       "helium-browser"
       "iina"
-      "keka"
+      "macpacker"
       "linearmouse"
       "macshot"
       "localsend"
