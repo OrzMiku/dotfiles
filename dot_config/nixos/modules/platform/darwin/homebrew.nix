@@ -33,6 +33,7 @@
       "linearmouse"
       "macshot"
       "localsend"
+      "thaw@beta"
       "flclash"
       "pearcleaner"
       "utm"
