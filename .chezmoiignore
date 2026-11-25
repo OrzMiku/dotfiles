@@ -13,3 +13,9 @@
 .local/share/color-schemes/
 .local/share/fcitx5/
 {{- end }}
+
+# Local ignore
+{{- $path := joinPath .chezmoi.homeDir ".config/chezmoi/.localignore" }}
+{{- if stat $path }}
+{{ include $path }}
+{{- end }}
